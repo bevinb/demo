@@ -1,4 +1,8 @@
-﻿.sp-header {
+﻿html, body {
+  height:100%;
+}
+
+.sp-header {
   height:70px;
   background:silver;
 }
@@ -15,6 +19,10 @@
   text-align:center;
   position:relative;
 }
+.sp-img-viewer.expanded {
+  height:calc(100%-70px);
+}
+
 .sp-collapse-handle {
   position:absolute;
   bottom:0;
@@ -22,13 +30,19 @@
   margin-left:-32px;
   width:64px;
   height:32px;
+  line-height:32px;
   cursor:pointer;
   border-radius:10px 10px 0 0;
   background:white;
+  font-family: FontAwesome;
+  font-size:32px;
 }
 
 .sp-img-detail {
   padding:24px;
+}
+.sp-img-detail.collapsed {
+  display:none;
 }
 
 .sp-tab-ct {
@@ -41,7 +55,16 @@
   cursor:pointer;
   line-height:40px;
   display:inline-block;
-  border:1px solid gray;
+  background:rgb(243,243,243);
+  font-weight:bold;
+}
+.sp-tab-ct .sp-tab.selected {
+  background:rgb(183,183,183);
+  color:rgb(29,158,224);
+}
+
+.sp-info-tab.hidden, .sp-pic-tab.hidden {
+  display:none;
 }
 
 .sp-tab-line {
