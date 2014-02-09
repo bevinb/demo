@@ -1,0 +1,68 @@
+﻿<!doctype html>
+<html ng-app="snappiq">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+  <title>Snappiq</title>
+  <link href="css/base.css" rel="stylesheet">
+  <link href="css/font-awesome.css" rel="stylesheet">
+  <link href="css/snappiq.css" rel="stylesheet">
+  <script src="lib/Angular.js"></script>
+  <script src="js/services/AdventureService.js"></script>
+  <script src="js/controllers/AdventureController.js"></script>
+</head>
+<body>
+<div class="sp-header">Logo</div>
+<div ng-controller="AdventureController">
+  <div class="sp-img-viewer">
+    <div class="sp-title">{{item.title}}</div>
+	<div>{{item.description}}</div>
+    <div class="sp-collapse-handle" ng-click="alert(22)">=</div>
+  </div>
+  <div class="sp-img-detail">
+    <div class="sp-tab-ct">
+	  <div class="sp-tab">Info</div>
+	  <div class="sp-tab">Pics</div>
+	</div>
+	<div class="sp-tab-line">
+	  <div class="sp-panel">
+	    <div class="sp-title">Prize Info</div>
+		<div>Snappcoins: {{item.coins}}</div>
+		<div>Prize:{{item.prize}}</div>
+	  </div>
+	  <div class="sp-h-spliter">22</div>
+	  <div class="sp-panel">
+	    <div class="sp-title">Timeline and Snappers</div>
+		<div>{{item.validTime}} seconds left before this adventure expires</div>
+		<div>{{item.snapperAmount}} snappers joined this adventure</div>
+	  </div>
+	</div>
+	<div class="sp-tab-line">
+	  <div class="sp-panel">
+	    <div class="sp-title">Rate this Adventure</div>
+	  </div>
+	  <div class="sp-rating-box">
+	    <div class="sp-rating-overlay" ng-mouseout="resetRating()">
+		  <div data-percent="1" ng-mouseover="showRatingTips(1)" ng-click="updateRating(1)"></div>
+		  <div data-percent="2" ng-mouseover="showRatingTips(2)" ng-click="updateRating(2)"></div>
+		  <div data-percent="3" ng-mouseover="showRatingTips(3)" ng-click="updateRating(3)"></div>
+		  <div data-percent="4" ng-mouseover="showRatingTips(4)" ng-click="updateRating(4)"></div>
+		  <div data-percent="5" ng-mouseover="showRatingTips(5)" ng-click="updateRating(5)"></div>
+		  <div data-percent="6" ng-mouseover="showRatingTips(6)" ng-click="updateRating(6)"></div>
+		  <div data-percent="7" ng-mouseover="showRatingTips(7)" ng-click="updateRating(7)"></div>
+		  <div data-percent="8" ng-mouseover="showRatingTips(8)" ng-click="updateRating(8)"></div>
+		  <div data-percent="9" ng-mouseover="showRatingTips(9)" ng-click="updateRating(9)"></div>
+		  <div data-percent="10" ng-mouseover="showRatingTips(10)" ng-click="updateRating(10)"></div>
+		</div>
+	    <div class="sp-rating" style="width:{{ratingPercent}};"></div>
+	  </div>
+	</div>
+	<div class="sp-tab-line">
+	  <div class="sp-panel">
+	    <div class="sp-title">Descriptions and Rules</div>
+	  </div>
+	  <div>{{item.rules}}</div>
+	</div>
+  </div>
+</div>
+</body>
+</html>
