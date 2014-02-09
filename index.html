@@ -13,9 +13,11 @@
 <body>
 <div class="sp-header">Logo</div>
 <div ng-controller="AdventureController">
-  <div class="sp-img-viewer" style="height:{{imgViewerHeight}}px;">
-    <div class="sp-title">{{item.title}}</div>
-	<div>{{item.description}}</div>
+  <div class="sp-img-viewer" style="height:{{imgViewerHeight}}px;">   
+	<div class="sp-img-note">
+	  <div class="sp-title">{{item.title}}</div>
+	  <div>{{item.description}}</div>
+	</div>
     <div class="sp-collapse-handle" ng-class="{'fa-angle-up':isCollapsed, 'fa-angle-down':!isCollapsed}" ng-click="toggleCollapse()"></div>
   </div>
   <div class="sp-img-detail" ng-class="{collapsed:isCollapsed}">
@@ -30,7 +32,7 @@
 			<div>Snappcoins: {{item.coins}}</div>
 			<div>Prize:{{item.prize}}</div>
 		  </div>
-		  <div class="sp-h-spliter">22</div>
+		  <div class="sp-h-spliter"></div>
 		  <div class="sp-panel">
 			<div class="sp-title">Timeline and Snappers</div>
 			<div>{{item.validTime}} seconds left before this adventure expires</div>
