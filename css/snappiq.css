@@ -4,11 +4,14 @@
 
 .sp-header {
   height:70px;
+  line-height:70px;
   background:silver;
+  padding-left:20px;
 }
 
 .sp-title {
   text-align:center;
+  padding:10px;
   font-weight:bold;
   color:rgb(29,158,224);
 }
@@ -81,25 +84,35 @@
 
 .sp-tab-line {
   width:100%;
+  padding-bottom:20px;
+  margin-bottom:20px;
+  margin-top:20px;
+  display:table;
+}
+.sp-tab-line.border {
   border-bottom:1px solid rgb(34,158,218);
-  padding:20px;
 }
 
 .sp-panel {
   background:rgb(243,243,243);
   width:40%;
   padding:10px;
-  display:inline-block;
+  display:table-cell;
+  margin:10px;
 }
-
 .sp-h-spliter {
-  width:20px;
-  height:100%;
-  margin:0;
-  display:inline-block;
-  border-right:1px solid rgb(183,183,183);
+  width:10%;
+  display:table-cell;
+}
+.sp-h-spliter.border {
+  background:url(../img/dot.png) repeat-y 50% 0;
 }
 
+.sp-rating-ct {
+  display:table-cell;
+  width:40%;
+  text-align:center;
+}
 .sp-rating-box {
   position:relative;
   vertical-align: middle;
@@ -137,4 +150,9 @@
 }
 .sp-rating:before {
   content: "\f005 \f005 \f005 \f005 \f005";
+}
+.sp-rules {
+  display:block;
+  width:100%;
+  margin-top:20px;
 }
